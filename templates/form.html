@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>Face Recognition</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Comfortaa);
+        body {
+           font-family: 'Comfortaa', cursive;
+            background: #353535;
+            color: #FFF;
+        }
+
+        h2 {
+            text-align: center;
+            color: #BDC3C7;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        #main{
+            margin-top:5%;
+            margin-left:35%;
+            font-size:20px;
+            font-weight:bold;
+            text-align:cente;
+            border-width: 5px;
+            border-color: #D64541;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 style="text-align: center">Face Recognition</h1>
+        <h2 style="color:#888;">Real time face Recognition</h2>
+        <h1 style="text-align:center;">Please Enter Your Name!</h1>
+        <div id ="main">
+            <form action="/record-data" method="post">
+			<table>
+				<tr>
+				<td><label for="name">Name : </label></td>
+ 				<td><input type="text" id="name" name="name" placeholder="Enter Name"></td>
+				</tr>
+                <tr><td> <button type="submit">SAVE</button></td></tr>
+			</table>
+		</form>
+		</div>
+    </div>
+
+</body>
+</html>
