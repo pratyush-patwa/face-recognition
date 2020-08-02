@@ -1,7 +1,9 @@
 from flask import Flask, render_template, request
-
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
+db = SQLAlchemy(app)
 
 
 @app.route('/')
@@ -16,7 +18,7 @@ def new():
 
 @app.route('/record-data', methods=['POST'])
 def record():
-    import create_db
+    #import create_db
     name = request.form['name']
     import record_face as rf
     rf.record(name)
